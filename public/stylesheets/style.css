@@ -6,3 +6,44 @@ body {
 a {
   color: #00B7FF;
 }
+
+.cont {
+	border: 10px solid rgb(4, 218, 136);
+	background: #ceeed8;
+	margin: 10% 10% 10% 10%;
+    padding: 10%;
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header{
+	margin-bottom: 12%;
+}
+
+#imagen img{
+  width: 50%;
+  height: 50%;
+}
+
+#imagen {
+	width: 40%;
+	height: 15vh;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 15px groove rgb(4, 218, 136);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.cont {
+		width: 95%;
+		height: auto;
+		margin:30% 30% 30% 30%;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	p{
+		font-size: 20px;
+	}
+}
