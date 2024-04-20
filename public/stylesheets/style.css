@@ -11,12 +11,12 @@ a {
 	border: 10px solid rgb(4, 218, 136);
 	background: #ceeed8;
 	margin: 10% 10% 10% 10%;
-    padding: 5%;
+    padding: 3%;
 	box-shadow: 0 3px 25px rgba(0, 0, 0, 0.3);
 }
 
 .header{
-	margin-bottom: 15%;
+	margin-bottom: 10%;
 }
 
 #imagen img{
@@ -40,6 +40,12 @@ a {
 	text-align: center;
 }
 
+.inf-{
+	padding: 0.5%;
+	border-radius: 0.4vh ;
+	background: #5dbadf;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.cont {
 		width: 55%;
@@ -57,6 +63,7 @@ a {
 		height: 100%;
 	}
 
+
 	h2 {
 		font-size: 50px;
 	}
@@ -67,5 +74,9 @@ a {
 
 	ul li{
 		font-size: 30px;
+	}
+
+	li{
+		padding: 30px;
 	}
 }
