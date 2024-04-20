@@ -41,12 +41,20 @@ a {
 }
 
 .inf-{
-	padding: 0.5%;
+	padding: 0.6%;
 	border-radius: 0.4vh ;
-	background: #5dbadf;
+	box-shadow:  3px 3px 5px rgb(66, 66, 223);
+	background: #99cee4;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+.redes{
+	padding: 2%;
+	height: 5%;
+	width: 10%;
+	border-radius: 70%;
+}
+
+@media only screen and (min-width: 220px) and (max-width: 991px) {
 	.cont {
 		width: 55%;
 		height: auto;
@@ -63,6 +71,10 @@ a {
 		height: 100%;
 	}
 
+	.redes{
+		height: 10%;
+		width: 15%;
+	}
 
 	h2 {
 		font-size: 50px;
@@ -73,7 +85,8 @@ a {
 	}
 
 	ul li{
-		font-size: 30px;
+		font-size: 20px;
+
 	}
 
 	li{
