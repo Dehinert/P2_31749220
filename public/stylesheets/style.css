@@ -25,8 +25,8 @@ a {
 }
 
 #imagen {
-	width: 30%;
-	height: 18vh;
+	width: 25%;
+	height: 20vh;
 	border-radius: 50%;
 	overflow: hidden;
 	border: 15px groove rgb(4, 218, 136);
@@ -58,11 +58,11 @@ a {
 	.cont {
 		width: 55%;
 		height: auto;
-		margin:10%;
+		margin:auto;
 	}
 
 	#imagen {
-		width: 40%;
+		width: 35%;
 		height: 20%;
 	}
 
