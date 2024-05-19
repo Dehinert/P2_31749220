@@ -41,10 +41,10 @@ a {
 }
 
 .inf-{
-	padding: 0.6%;
+	padding: 3%;
 	border-radius: 0.4vh ;
 	box-shadow:  3px 3px 5px rgb(66, 66, 223);
-	background: #99cee4;
+	background: #55a1c2;
 }
 
 .redes{
@@ -53,6 +53,37 @@ a {
 	width: 10%;
 	border-radius: 70%;
 }
+
+.contacto{
+	background-color: rgb(168, 214, 214);
+	border-radius: 5%;
+}
+
+#campos{
+	padding: 3%;
+}
+
+#email{
+	margin-bottom: 5%;
+	padding:1%;
+	background-color: #6bb9d8;
+	border-radius: 40vh;
+}
+
+#name{
+	margin-bottom: 5%;
+	padding: 1%;
+	background-color:#6bb9d8;
+	border-radius: 40vh;
+} 
+
+#mensaje{
+	margin-bottom: 5%;
+	padding: 2%;
+	background-color:#6bb9d8 ;
+	border-radius: 1vh;
+}
+
 
 @media only screen and (min-width: 220px) and (max-width: 991px) {
 	.cont {
@@ -91,5 +122,9 @@ a {
 
 	li{
 		padding: 30px;
+	}
+
+	#campos{
+		font-size: 25px;
 	}
 }

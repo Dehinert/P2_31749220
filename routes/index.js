@@ -1,11 +1,14 @@
-var express = require('express');
+const ContactosController = require("../controllers/ContactosController");
+const contactosController = new ContactosController();
+
+const indexController = require("../controllers/indexController")
+
+var express = require("express");
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', otra : 'HOLA MUNDO', 
-  firstname: 'Dehinert', lastname: 'Moran' , id: '31749220', sec: '2' 
-});
-});
+router.get("/", indexController);
+
+router.post("/form-contacto", contactosController.add);
 
 module.exports = router;
