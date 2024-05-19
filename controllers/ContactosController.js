@@ -27,7 +27,7 @@ class ContactosController {
 
     console.log(contactos);
 
-    res.send("se ha enviado todos los datos correctamente");
+    res.send("se ha enviado todos los datos de correctamente");
     
   }
 }
