@@ -1,4 +1,4 @@
-const ContactosModel = require("../models/contactosModel");
+const ContactosModel = require("../models/ContactosModel.js");
 
 class ContactosController {
   constructor() {
