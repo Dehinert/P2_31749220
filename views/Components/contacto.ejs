@@ -1,5 +1,5 @@
 <div class="contacto">
-    <form  action="/form-contacto" method="post">
+    <form  action="/form-contacto" method="post" onsubmit="return submitUserForm();">
     <div id="campos">
       <label for="email">Correo electronico:</label><br>
       <input type="email" name="email" id="email" required /><br>
@@ -15,9 +15,31 @@
         cols="51"
         rows="4"
       ></textarea><br>
+
+      <div class="g-recaptcha" data-sitekey="6Leu4-0pAAAAAIxn6_OsRYzzgts9kSVNVbTGVkw2" data-callback="verifyCaptcha"></div>
+      <div id="g-recaptcha-error"></div>
+
       <input type="submit" value="enviar"/>
     </div>
     </form>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+    var recaptcha_response = '';
+    function submitUserForm() {
+        if(recaptcha_response.length == 0) {
+            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+            return false;
+        }
+        return true;
+    }
+    
+    function verifyCaptcha(token) {
+        recaptcha_response = token;
+        document.getElementById('g-recaptcha-error').innerHTML = '';
+    }
+    </script>
+    
 </div>
    
 
