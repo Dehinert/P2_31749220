@@ -19,7 +19,7 @@ class ContactosController {
 
   async obtenerPais(ip) {
     try {
-      const response = await fetch('https://ipinfo.io/'+ip+'?token=197c576e48e0c3');
+      const response = await fetch('https://ipinfo.io/'+ip+'?token=cb85ccdd0e958e');
       const data = await response.json();
       return data.country; // Retorna el país
     } catch (error) {
