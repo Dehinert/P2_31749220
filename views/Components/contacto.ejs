@@ -21,27 +21,26 @@
 
       <input type="submit" value="enviar"/>
     </div>
-    </form>
-
-    
-    <script>
-    var recaptcha_response = '';
-    function submitUserForm() {
-        if(recaptcha_response.length == 0) {
-            document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
-            return false;
-        }
-        return true;
-    }
-    
-    function verifyCaptcha(token) {
-        recaptcha_response = token;
-        document.getElementById('g-recaptcha-error').innerHTML = '';
-    }
-    </script>
-    
+    </form>    
 </div>
-   
+    
+<script src='https://www.google.com/recaptcha/api.js'></script>
+    
+<script>
+var recaptcha_response = '';
+function submitUserForm() {
+    if(recaptcha_response.length == 0) {
+        document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+        return false;
+    }
+    return true;
+}
+
+function verifyCaptcha(token) {
+    recaptcha_response = token;
+    document.getElementById('g-recaptcha-error').innerHTML = '';
+}
+</script>
 
   <script>
     document.getElementById('submit-btn').addEventListener('click', async () => {
