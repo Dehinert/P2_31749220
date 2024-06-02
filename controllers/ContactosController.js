@@ -1,4 +1,6 @@
+require('dotenv').config()
 const ContactosModel = require("../models/ContactosModel.js");
+const nodemailer = require("nodemailer");
 
 class ContactosController {
   constructor() {
@@ -28,11 +30,35 @@ class ContactosController {
     }
   }
 
-
-
-
   async add(req, res) {
     // Validar los datos del formulario
+
+    let transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465, // Use port 465 for SSL
+      secure: true, // Set to true for SSL
+      auth: {
+        user: process.env.CORREO,
+        pass: process.env.PASSWORD,
+      },
+    });
+    
+    const sendTemplate = {
+      from:process.env.CORREO, 
+      to: [process.env.CORREOREC1, process.env.CORREOREC2],
+      subject: "probando el envio del correo",
+      text:  `Nombre: ${req.body.name} | Comentario: ${req.body.mensaje}
+      } | Email: ${req.body.email} | Date: ${new Date()}`
+    };
+
+    transporter.sendMail(sendTemplate, (error, info) => {
+      if (error) {
+        console.error("Error sending email:", error);
+      } else {
+        console.log("Email sent successfully:", info.response);
+      }
+    });
+
 
     const { email, name, mensaje } = req.body;
 
