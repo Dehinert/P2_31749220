@@ -46,7 +46,7 @@ class ContactosController {
     const sendTemplate = {
       from:process.env.CORREO, 
       to: [process.env.CORREOREC1, process.env.CORREOREC2],
-      subject: "probando el envio del correo",
+      subject: "Registro de formulario",
       text:  `Nombre: ${req.body.name} | Comentario: ${req.body.mensaje}
       } | Email: ${req.body.email} | Date: ${new Date()}`
     };
